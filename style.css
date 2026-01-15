@@ -316,44 +316,16 @@ h1, h2, h3 {
     border-color: var(--gold);
 }
 
-.collection-image {
-    position: relative;
+.product-img {
+    width: 100%;
     height: 450px;
-    background: linear-gradient(135deg, #2A2A2A 0%, #1A1A1A 100%);
-    overflow: hidden;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
 }
 
-.collection-image.polo {
-    background: linear-gradient(135deg, #1e3a5f 0%, #2d5986 100%);
-}
-
-.collection-image.hoodie {
-    background: linear-gradient(135deg, #4a1a4a 0%, #6b2d6b 100%);
-}
-
-.collection-image.jogger {
-    background: linear-gradient(135deg, #1a4a3a 0%, #2d6b5a 100%);
-}
-
-.collection-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(10, 10, 10, 0.3);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background 0.4s ease;
-}
-
-.collection-card:hover .collection-overlay {
-    background: rgba(212, 175, 55, 0.2);
-}
-
-.collection-icon {
-    font-size: 5rem;
+.collection-card:hover .product-img {
+    transform: scale(1.05);
 }
 
 .collection-info {
@@ -373,13 +345,22 @@ h1, h2, h3 {
     color: var(--cream);
     font-size: 0.95rem;
     line-height: 1.8;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     font-weight: 300;
+}
+
+.price-tag {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: var(--gold);
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    text-shadow: 0 2px 10px rgba(212, 175, 55, 0.3);
 }
 
 .btn-order {
     display: inline-block;
-    padding: 0.9rem 2rem;
+    padding: 1rem 2.5rem;
     background: transparent;
     border: 1px solid var(--gold);
     color: var(--gold);
@@ -393,6 +374,8 @@ h1, h2, h3 {
 .btn-order:hover {
     background: var(--gold);
     color: var(--dark);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 20px rgba(212, 175, 55, 0.4);
 }
 
 /* ========== SERVICES SECTION ========== */
